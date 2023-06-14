@@ -1,0 +1,8 @@
+<form method="POST" action="{% url 'execute_assembly' %}">
+    {% csrf_token %}
+    <label for="program_id">Program ID:</label>
+    <input type="text" name="program_id" required><br>
+    <label for="program_text">Assembly Program:</label><br>
+    <textarea name="program_text" rows="5" required></textarea><br>
+    <input type="submit" value="Execute">
+</form>
